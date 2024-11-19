@@ -16,7 +16,8 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return #✕ボタンを押したら終了
-        screen.blit(bg_img, [100, 0]) #screen surfaceに背景画像surfaceを貼り付ける（blit→貼り付け）、[横, 縦]で位置指定
+        screen.blit(bg_img, [0, 0]) #screen surfaceに背景画像surfaceを貼り付ける（blit→貼り付け）、[横, 縦]で位置指定
+        screen.blit(tori_img, [300, 200]) #screen surfaceにこうかとんsurfaceを貼り付ける
         pg.display.update()
         tmr += 1        
         clock.tick(10)
