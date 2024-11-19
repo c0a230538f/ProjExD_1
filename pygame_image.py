@@ -9,8 +9,9 @@ def main():
     pg.display.set_caption("はばたけ！こうかとん") #ウィンドウのタイトル
     screen = pg.display.set_mode((800, 600)) #ウィンドウのサイズ
     clock  = pg.time.Clock() #フレームレート調整
-    bg_img = pg.image.load("fig/pg_bg.jpg") #画像を読み込む関数（今回は背景）
-
+    bg_img = pg.image.load("fig/pg_bg.jpg") #背景surfaceを作成（今回は背景）
+    tori_img = pg.image.load("fig/3.png") #こうかとんのsurfaceを作成
+    tori_img = pg.transform.flip(tori_img, True, False) #surfaceを左右反転　変数(画像（surface）, 左右反転, 上下反転)
     tmr = 0
     while True:
         for event in pg.event.get():
